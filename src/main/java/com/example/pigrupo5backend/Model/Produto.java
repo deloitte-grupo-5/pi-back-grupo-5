@@ -14,18 +14,18 @@ public class Produto {
 
     @NotNull
     @Size(max=100)
-    private String codigo;
-
-    @NotNull
-    @Size(max=100)
     private String nome;
-
-    @NotNull
-    private float preco;
 
     @NotNull
     @Size(max=500)
     private String descricao;
+
+    private String img;
+
+    @NotNull
+    private float valor;
+
+    private String thumb;
 
     @NotNull
     private int quantidade_estoque;
@@ -38,28 +38,12 @@ public class Produto {
         this.id = id;
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
     public String getNome() {
         return nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public float getPreco() {
-        return preco;
-    }
-
-    public void setPreco(float preco) {
-        this.preco = preco;
     }
 
     public String getDescricao() {
@@ -76,5 +60,29 @@ public class Produto {
 
     public void setQuantidade_estoque(int quantidade_estoque) {
         this.quantidade_estoque = quantidade_estoque;
+    }
+
+    public float getValor() {
+        return valor;
+    }
+
+    public void setValor(float valor) {
+        this.valor = valor;
+    }
+
+    public String getThumb() {
+        return thumb;
+    }
+
+    public void setThumb(String thumb) {
+        this.thumb = thumb;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
