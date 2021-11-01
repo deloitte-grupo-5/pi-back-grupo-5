@@ -1,6 +1,5 @@
 package com.example.pigrupo5backend.Model;
 
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -13,22 +12,42 @@ public class Produto {
     private Long id;
 
     @NotNull
+    @Size(min=5, max=20)
+    private Integer codigo;
+
+    @NotNull
     @Size(max=100)
     private String nome;
 
     @NotNull
-    @Size(max=500)
+    @Size(max=1000)
     private String descricao;
 
     private String img;
 
     @NotNull
-    private float valor;
+    private String nomeCientifico;
 
-    private String thumb;
+    @Size(max=200)
+    private String outrosNomes;
+
+    @NotNull
+    private float valor;
 
     @NotNull
     private int quantidade_estoque;
+
+    @NotNull
+    private float peso;
+
+    @NotNull
+    private float altura;
+
+    @NotNull
+    private float comprimento;
+
+    @NotNull
+    private float largura;
 
     public Long getId() {
         return id;
@@ -70,12 +89,28 @@ public class Produto {
         this.valor = valor;
     }
 
-    public String getThumb() {
-        return thumb;
+    public Integer getCodigo() {
+        return codigo;
     }
 
-    public void setThumb(String thumb) {
-        this.thumb = thumb;
+    public void setCodigo(Integer codigo) {
+        this.codigo = codigo;
+    }
+
+    public String getNomeCientifico() {
+        return nomeCientifico;
+    }
+
+    public void setNomeCientifico(String nomeCientifico) {
+        this.nomeCientifico = nomeCientifico;
+    }
+
+    public String getOutrosNomes() {
+        return outrosNomes;
+    }
+
+    public void setOutrosNomes(String outrosNomes) {
+        this.outrosNomes = outrosNomes;
     }
 
     public String getImg() {

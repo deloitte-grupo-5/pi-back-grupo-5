@@ -1,9 +1,12 @@
 package com.example.pigrupo5backend.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Table(name = "tb_postagem")
@@ -13,18 +16,35 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
+    @JsonIgnoreProperties("post")
+    @JoinColumn(name="nome_usuario", referencedColumnName="nome",nullable=false)
+    private Usuario user;
+
+    @OneToMany(mappedBy = "", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("post")
+    private List<Comentario> comentarios;
+
     @NotNull
     @Size(min = 2, max = 100)
     private String titulo;
 
     @NotNull
-    @Size(min = 2, max = 100)
+    @Size(min = 2, max = 1000)
     private String texto;
 
     @Temporal(TemporalType.TIMESTAMP) //para informar que estamos trabalhando com tempo
     private Date data = new java.sql.Date(System.currentTimeMillis());
 
-    @Size(min = 2, max = 100)
+    private float preparo;
+
+    private float porcao;
+
+    private float curtidas;
+
+    private float comentários;
+
+    @Size(min = 2, max = 200)
     private String referencias;
 
     public Long getId() {
@@ -33,6 +53,22 @@ public class Post {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public Usuario getUser() {
+        return user;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void setComentarios(List<Comentario> comentarios) {
+        this.comentarios = comentarios;
     }
 
     public String getTitulo() {
@@ -57,6 +93,38 @@ public class Post {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public float getPreparo() {
+        return preparo;
+    }
+
+    public void setPreparo(float preparo) {
+        this.preparo = preparo;
+    }
+
+    public float getPorcao() {
+        return porcao;
+    }
+
+    public void setPorcao(float porcao) {
+        this.porcao = porcao;
+    }
+
+    public float getCurtidas() {
+        return curtidas;
+    }
+
+    public void setCurtidas(float curtidas) {
+        this.curtidas = curtidas;
+    }
+
+    public float getComentários() {
+        return comentários;
+    }
+
+    public void setComentários(float comentários) {
+        this.comentários = comentários;
     }
 
     public String getReferencias() {

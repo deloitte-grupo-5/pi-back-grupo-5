@@ -1,8 +1,11 @@
 package com.example.pigrupo5backend.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 
 @Entity
 @Table(name="tb_usuario")
@@ -34,6 +37,18 @@ public class Usuario {
     @NotNull
     @Size(min=5, max=100)
     private String senha;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("usuario")
+    private List<Endereco> endereco;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("usuario")
+    private List<Post> posts;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonIgnoreProperties("usuario")
+    private List<Comentario> comentarios;
 
     public Long getId() {
         return id;
@@ -91,4 +106,11 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public List<Endereco> getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(List<Endereco> endereco) {
+        this.endereco = endereco;
+    }
 }
