@@ -46,10 +46,6 @@ public class Usuario {
     @JsonIgnoreProperties("usuario")
     private List<Post> posts;
 
-    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("usuario")
-    private List<Comentario> comentarios;
-
     public Long getId() {
         return id;
     }

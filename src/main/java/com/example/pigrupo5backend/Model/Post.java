@@ -6,7 +6,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Table(name = "tb_postagem")
@@ -18,12 +17,7 @@ public class Post {
 
     @ManyToOne
     @JsonIgnoreProperties("post")
-    @JoinColumn(name="nome_usuario", referencedColumnName="nome",nullable=false)
     private Usuario user;
-
-    @OneToMany(mappedBy = "", cascade = CascadeType.ALL)
-    @JsonIgnoreProperties("post")
-    private List<Comentario> comentarios;
 
     @NotNull
     @Size(min = 2, max = 100)
@@ -61,14 +55,6 @@ public class Post {
 
     public void setUser(Usuario user) {
         this.user = user;
-    }
-
-    public List<Comentario> getComentarios() {
-        return comentarios;
-    }
-
-    public void setComentarios(List<Comentario> comentarios) {
-        this.comentarios = comentarios;
     }
 
     public String getTitulo() {
