@@ -38,16 +38,7 @@ public class Produto {
     private int quantidade_estoque;
 
     @NotNull
-    private float peso;
-
-    @NotNull
-    private float altura;
-
-    @NotNull
-    private float comprimento;
-
-    @NotNull
-    private float largura;
+    private float valorFrete;
 
     public Long getId() {
         return id;
@@ -119,5 +110,13 @@ public class Produto {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public float getValorFrete() {
+        return valorFrete;
+    }
+
+    public void setValorFrete(float valorFrete) {
+        this.valorFrete = valorFrete;
     }
 }
