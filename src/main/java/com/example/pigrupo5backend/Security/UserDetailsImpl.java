@@ -9,16 +9,26 @@ import java.util.Collection;
 public class UserDetailsImpl implements UserDetails {
 
     private static final long serialVersionUID = 1L;
+    private Long id;
     private String username;
     private String password;
 
     public UserDetailsImpl(Usuario user) {
+        this.id = user.getId();
         this.username = user.getUsuario();
         this.password = user.getSenha();
     }
 
     public UserDetailsImpl() {
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setUsername(String username) {
