@@ -35,7 +35,6 @@ public class ProdutoController {
     @GetMapping("/produto/{nome}")
     public ResponseEntity<List<Produto>> getByTitutlo(@PathVariable String nome) {
         return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
-
     }
 
     @GetMapping("/produtos/{descriao}")
@@ -57,4 +56,4 @@ public class ProdutoController {
     public void delete(@PathVariable Long id) {
         repository.deleteById(id);
     }
-}
+    }

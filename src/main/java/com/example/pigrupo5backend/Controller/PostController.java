@@ -17,7 +17,6 @@ public class PostController {
     @Autowired
     private final PostRepository repository;
 
-
     public PostController(PostRepository repository) throws Exception{
         this.repository = repository;
     }

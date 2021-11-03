@@ -36,7 +36,7 @@ public class Post {
 
     private float curtidas;
 
-    private float comentários;
+    private float comentarios;
 
     @Size(min = 2, max = 200)
     private String referencias;
@@ -106,11 +106,11 @@ public class Post {
     }
 
     public float getComentários() {
-        return comentários;
+        return comentarios;
     }
 
     public void setComentários(float comentários) {
-        this.comentários = comentários;
+        this.comentarios = comentários;
     }
 
     public String getReferencias() {

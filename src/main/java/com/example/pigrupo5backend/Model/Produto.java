@@ -13,7 +13,7 @@ public class Produto {
 
     @NotNull
     @Size(min=5, max=20)
-    private Integer codigo;
+    private String codigo;
 
     @NotNull
     @Size(max=100)
@@ -80,11 +80,11 @@ public class Produto {
         this.valor = valor;
     }
 
-    public Integer getCodigo() {
+    public String getCodigo() {
         return codigo;
     }
 
-    public void setCodigo(Integer codigo) {
+    public void setCodigo(String codigo) {
         this.codigo = codigo;
     }
 

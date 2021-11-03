@@ -20,5 +20,4 @@ public class SwaggerConfig {
                 .build();
     }
 }
-
 // acessar com url/swagger-ui.html
