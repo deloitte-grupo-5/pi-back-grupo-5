@@ -1,10 +1,9 @@
 package com.example.pigrupo5backend.Controller;
 
-import com.example.pigrupo5backend.Model.Produto;
+
 import com.example.pigrupo5backend.Model.UserLogin;
 import com.example.pigrupo5backend.Model.Usuario;
 import com.example.pigrupo5backend.Service.UsuarioService;
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +25,7 @@ public class UsuarioController {
         return usuarioService.logar(user).map(resp -> ResponseEntity.ok(resp))
                 .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
     }
+
 
     @PostMapping("/cadastrar")
     public ResponseEntity<Usuario> post(@RequestBody Usuario usuario) {

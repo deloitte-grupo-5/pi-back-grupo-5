@@ -24,6 +24,7 @@ public class Usuario {
 
     @NotNull
     @Size(min=2, max = 100)
+    @Column(unique = true)
     private String email;
 
     @NotNull
@@ -32,6 +33,7 @@ public class Usuario {
 
     @NotNull
     @Size(min=5, max=100)
+    @Column(unique = true)
     private String usuario;
 
     @NotNull
@@ -108,5 +110,10 @@ public class Usuario {
 
     public void setEndereco(List<Endereco> endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 }
