@@ -17,6 +17,10 @@ public class Comentario {
     @JsonIgnoreProperties("comentario")
     private Usuario user;
 
+    @ManyToOne
+    @JsonIgnoreProperties("comentario")
+    private Post post;
+
     private String title;
     private String body;
 
@@ -55,6 +59,14 @@ public class Comentario {
 
     public void setUser(Usuario user) {
         this.user = user;
+    }
+
+    public Post getPost() {
+        return post;
+    }
+
+    public void setPost(Post post) {
+        this.post = post;
     }
 
     public Date getData() {

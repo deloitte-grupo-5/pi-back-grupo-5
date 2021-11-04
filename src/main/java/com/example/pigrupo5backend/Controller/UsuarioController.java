@@ -1,13 +1,16 @@
 package com.example.pigrupo5backend.Controller;
 
+import com.example.pigrupo5backend.Model.Produto;
 import com.example.pigrupo5backend.Model.UserLogin;
 import com.example.pigrupo5backend.Model.Usuario;
 import com.example.pigrupo5backend.Service.UsuarioService;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
