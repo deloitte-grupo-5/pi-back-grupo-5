@@ -14,7 +14,7 @@
     <name>pi-grupo5-backend</name>
     <description>pi-grupo5-backend</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>1.8</java.version>
     </properties>
     <dependencies>
         <dependency>
