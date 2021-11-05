@@ -42,12 +42,12 @@ public class Post {
 
     private float curtidas;
 
-    @Size(min=1, max=500)
+    @Size(max=500)
     private String img;
 
     private ArrayList<String> ingredientes;
 
-    @Size(min = 2, max = 200)
+    @Size(max = 500)
     private String referencias;
 
     public Long getId() {
