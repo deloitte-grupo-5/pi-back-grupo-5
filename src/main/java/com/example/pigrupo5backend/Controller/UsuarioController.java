@@ -26,7 +26,6 @@ public class UsuarioController {
                 .orElse(ResponseEntity.status(HttpStatus.UNAUTHORIZED).build());
     }
 
-
     @PostMapping("/cadastrar")
     public ResponseEntity<Usuario> post(@RequestBody Usuario usuario) {
         return ResponseEntity.status(HttpStatus.CREATED)

@@ -42,7 +42,7 @@ public class ProdutoController {
         return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
     }
 
-    @PostMapping  //vamos usar esta annotation para identificar que usaremos o verbo post
+    @PostMapping
     public ResponseEntity<Produto> post (@RequestBody Produto produto) {
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(produto));
     }
