@@ -5,7 +5,6 @@ import com.example.pigrupo5backend.Repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.parameters.P;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -33,7 +32,7 @@ public class PostController {
     }
 
     @GetMapping("/titulo/{titulo}")
-    public ResponseEntity<List<Post>> getByTitutlo(@PathVariable String titulo) {
+    public ResponseEntity<List<Post>> getByTitulo(@PathVariable String titulo) {
         return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
     }
 
@@ -42,7 +41,7 @@ public class PostController {
         return ResponseEntity.ok(repository.findAllByTextoContainingIgnoreCase(texto));
     }
 
-    @PostMapping  //vamos usar esta annotation para identificar que usaremos o verbo post
+    @PostMapping
     public ResponseEntity<Post> post(@RequestBody Post postagem) {
         return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
     }
