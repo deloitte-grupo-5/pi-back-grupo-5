@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,6 +41,10 @@ public class Post {
     private float porcao;
 
     private float curtidas;
+
+    private String img;
+
+    private ArrayList<String> ingredientes;
 
     @Size(min = 2, max = 200)
     private String referencias;
@@ -114,6 +119,22 @@ public class Post {
 
     public void setCurtidas(float curtidas) {
         this.curtidas = curtidas;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+
+    public ArrayList<String> getIngredientes() {
+        return ingredientes;
+    }
+
+    public void setIngredientes(ArrayList<String> ingredientes) {
+        this.ingredientes = ingredientes;
     }
 
     public String getReferencias() {
