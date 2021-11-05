@@ -30,7 +30,7 @@ public class Post {
     private String titulo;
 
     @NotNull
-    @Size(min = 2, max = 1000)
+    @Size(min = 2, max = 10000)
     private String texto;
 
     @Temporal(TemporalType.TIMESTAMP) //para informar que estamos trabalhando com tempo
@@ -47,7 +47,7 @@ public class Post {
 
     private ArrayList<String> ingredientes;
 
-    @Size(max = 500)
+    @Size(max = 1000)
     private String referencias;
 
     public Long getId() {
