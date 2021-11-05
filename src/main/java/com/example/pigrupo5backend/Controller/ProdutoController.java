@@ -32,12 +32,12 @@ public class ProdutoController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    @GetMapping("/nome/{nome}")
+    @GetMapping("/produto/{nome}")
     public ResponseEntity<List<Produto>> getByTitutlo(@PathVariable String nome) {
         return ResponseEntity.ok(repository.findAllByNomeContainingIgnoreCase(nome));
     }
 
-    @GetMapping("/descricao/{descricao}")
+    @GetMapping("/produtos/{descriao}")
     public ResponseEntity<List<Produto>> getByTexto(@PathVariable String descricao) {
         return ResponseEntity.ok(repository.findAllByDescricaoContainingIgnoreCase(descricao));
     }
