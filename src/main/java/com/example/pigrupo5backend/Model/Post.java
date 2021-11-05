@@ -42,6 +42,7 @@ public class Post {
 
     private float curtidas;
 
+    @Size(min=1, max=500)
     private String img;
 
     private ArrayList<String> ingredientes;
