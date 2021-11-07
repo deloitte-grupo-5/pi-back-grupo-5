@@ -51,5 +51,4 @@ public class EnderecoController {
     public void delete(@PathVariable Long id) {
         repository.deleteById(id);
     }
-
 }

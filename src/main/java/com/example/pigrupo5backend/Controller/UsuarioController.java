@@ -1,5 +1,6 @@
 package com.example.pigrupo5backend.Controller;
 
+import com.example.pigrupo5backend.Model.Produto;
 import com.example.pigrupo5backend.Model.UserLogin;
 import com.example.pigrupo5backend.Model.Usuario;
 import com.example.pigrupo5backend.Repository.UsuarioRepository;
@@ -42,5 +43,13 @@ public class UsuarioController {
                 .body(usuarioService.cadastrarUsuario(usuario));
     }
 
+    @PutMapping
+    public ResponseEntity<Usuario> put(@RequestBody Usuario usuario) {
+        return ResponseEntity.status(HttpStatus.OK).body(repository.save(usuario));
+    }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Long id) {
+        repository.deleteById(id);
+    }
 }
