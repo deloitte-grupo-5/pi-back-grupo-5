@@ -40,6 +40,21 @@ public class Produto {
     @NotNull
     private float valorFrete;
 
+    private boolean podeSerCozido;
+
+    private boolean DeveSerCozido;
+
+    private boolean  folhasComestiveis;
+
+    private boolean raizesComestiveis;
+
+    private boolean frutosComestiveis;
+
+    private boolean floresComestiveis;
+
+    private boolean sementesComestiveis;
+
+
     public Long getId() {
         return id;
     }

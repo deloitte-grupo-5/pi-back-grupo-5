@@ -1,6 +1,5 @@
 package com.example.pigrupo5backend.Controller;
 
-import com.example.pigrupo5backend.Model.Produto;
 import com.example.pigrupo5backend.Model.UserLogin;
 import com.example.pigrupo5backend.Model.Usuario;
 import com.example.pigrupo5backend.Repository.UsuarioRepository;
