@@ -40,9 +40,7 @@ public class Produto {
     @NotNull
     private float valorFrete;
 
-    private String podeSerCozido;
-
-    private String DeveSerCozido;
+    private String cozer;
 
     private boolean folhasComestiveis;
 
@@ -134,20 +132,12 @@ public class Produto {
         this.valorFrete = valorFrete;
     }
 
-    public String isPodeSerCozido() {
-        return podeSerCozido;
+    public String getCozer() {
+        return cozer;
     }
 
-    public void setPodeSerCozido(String podeSerCozido) {
-        this.podeSerCozido = podeSerCozido;
-    }
-
-    public String isDeveSerCozido() {
-        return DeveSerCozido;
-    }
-
-    public void setDeveSerCozido(String deveSerCozido) {
-        DeveSerCozido = deveSerCozido;
+    public void setCozer(String cozer) {
+        this.cozer = cozer;
     }
 
     public boolean isFolhasComestiveis() {
