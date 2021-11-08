@@ -42,15 +42,15 @@ public class Produto {
 
     private String cozer;
 
-    private boolean folhasComestiveis;
+    private boolean folha;
 
-    private boolean raizesComestiveis;
+    private boolean raiz;
 
-    private boolean frutosComestiveis;
+    private boolean fruto;
 
-    private boolean floresComestiveis;
+    private boolean flor;
 
-    private boolean sementesComestiveis;
+    private boolean semente;
 
     public Long getId() {
         return id;
@@ -140,44 +140,44 @@ public class Produto {
         this.cozer = cozer;
     }
 
-    public boolean isFolhasComestiveis() {
-        return folhasComestiveis;
+    public boolean isFolha() {
+        return folha;
     }
 
-    public void setFolhasComestiveis(boolean folhasComestiveis) {
-        this.folhasComestiveis = folhasComestiveis;
+    public void setFolha(boolean folha) {
+        this.folha = folha;
     }
 
-    public boolean isRaizesComestiveis() {
-        return raizesComestiveis;
+    public boolean isRaiz() {
+        return raiz;
     }
 
-    public void setRaizesComestiveis(boolean raizesComestiveis) {
-        this.raizesComestiveis = raizesComestiveis;
+    public void setRaiz(boolean raiz) {
+        this.raiz = raiz;
     }
 
-    public boolean isFrutosComestiveis() {
-        return frutosComestiveis;
+    public boolean isFruto() {
+        return fruto;
     }
 
-    public void setFrutosComestiveis(boolean frutosComestiveis) {
-        this.frutosComestiveis = frutosComestiveis;
+    public void setFruto(boolean fruto) {
+        this.fruto = fruto;
     }
 
-    public boolean isFloresComestiveis() {
-        return floresComestiveis;
+    public boolean isFlor() {
+        return flor;
     }
 
-    public void setFloresComestiveis(boolean floresComestiveis) {
-        this.floresComestiveis = floresComestiveis;
+    public void setFlor(boolean flor) {
+        this.flor = flor;
     }
 
-    public boolean isSementesComestiveis() {
-        return sementesComestiveis;
+    public boolean isSemente() {
+        return semente;
     }
 
-    public void setSementesComestiveis(boolean sementesComestiveis) {
-        this.sementesComestiveis = sementesComestiveis;
+    public void setSemente(boolean semente) {
+        this.semente = semente;
     }
 }
 
