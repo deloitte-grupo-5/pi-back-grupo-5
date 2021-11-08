@@ -40,11 +40,11 @@ public class Produto {
     @NotNull
     private float valorFrete;
 
-    private boolean podeSerCozido;
+    private String podeSerCozido;
 
-    private boolean DeveSerCozido;
+    private String DeveSerCozido;
 
-    private boolean  folhasComestiveis;
+    private boolean folhasComestiveis;
 
     private boolean raizesComestiveis;
 
@@ -53,7 +53,6 @@ public class Produto {
     private boolean floresComestiveis;
 
     private boolean sementesComestiveis;
-
 
     public Long getId() {
         return id;
@@ -134,4 +133,63 @@ public class Produto {
     public void setValorFrete(float valorFrete) {
         this.valorFrete = valorFrete;
     }
+
+    public String isPodeSerCozido() {
+        return podeSerCozido;
+    }
+
+    public void setPodeSerCozido(String podeSerCozido) {
+        this.podeSerCozido = podeSerCozido;
+    }
+
+    public String isDeveSerCozido() {
+        return DeveSerCozido;
+    }
+
+    public void setDeveSerCozido(String deveSerCozido) {
+        DeveSerCozido = deveSerCozido;
+    }
+
+    public boolean isFolhasComestiveis() {
+        return folhasComestiveis;
+    }
+
+    public void setFolhasComestiveis(boolean folhasComestiveis) {
+        this.folhasComestiveis = folhasComestiveis;
+    }
+
+    public boolean isRaizesComestiveis() {
+        return raizesComestiveis;
+    }
+
+    public void setRaizesComestiveis(boolean raizesComestiveis) {
+        this.raizesComestiveis = raizesComestiveis;
+    }
+
+    public boolean isFrutosComestiveis() {
+        return frutosComestiveis;
+    }
+
+    public void setFrutosComestiveis(boolean frutosComestiveis) {
+        this.frutosComestiveis = frutosComestiveis;
+    }
+
+    public boolean isFloresComestiveis() {
+        return floresComestiveis;
+    }
+
+    public void setFloresComestiveis(boolean floresComestiveis) {
+        this.floresComestiveis = floresComestiveis;
+    }
+
+    public boolean isSementesComestiveis() {
+        return sementesComestiveis;
+    }
+
+    public void setSementesComestiveis(boolean sementesComestiveis) {
+        this.sementesComestiveis = sementesComestiveis;
+    }
 }
+
+
+
